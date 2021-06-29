@@ -70,3 +70,32 @@ $(document).ready(function(){
         }
     });
 });
+  
+// Listen for a submit
+document.querySelector(".contact-form").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    // Get input Values
+    let nama = document.querySelector(".nama").value;
+    let emailnya = document.querySelector(".emailnya").value;
+    let subject = document.querySelector(".subject").value;
+    let message = document.querySelector(".message").value;
+
+    document.querySelector(".contact-form").reset();
+
+    sendEmail(nama, emailnya, subject, message);
+}
+
+  function sendEmail(nama, emailnya, subject, message) {
+      Email.send({
+          Host: "smtp.gmail.com",
+          Username: "adhiardiansyah23@gmail.com",
+          Password: "untlcyonvnwwnpnd",
+          To: "adhiardiansyah23@gmail.com",
+          From: "adhiardiansyah23@gmail.com",
+          Subject: `${nama} mengirim anda pesan`,
+          Body: `Nama : ${nama} <br/> Email: ${emailnya} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
+      }).then((message) => alert("Pesan berhasil dikirim."))
+  }

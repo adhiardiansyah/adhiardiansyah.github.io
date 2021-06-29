@@ -210,20 +210,20 @@
                 </div>
                 <div class="column right">
                     <div class="text">Kirim Pesan</div>
-                    <form action="#">
+                    <form method="POST" class="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Nama" required>
+                                <input type="text" class="nama" placeholder="Nama" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" class="emailnya" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Judul" required>
+                            <input type="text" class="subject" placeholder="Judul" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Pesan.." required></textarea>
+                            <textarea cols="30" rows="10" class="message" placeholder="Pesan.." required></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Kirim</button>
@@ -239,6 +239,7 @@
         <span>Created By <a href="https://adhiardiansyah.github.io">Adhi Ardiansyah</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
