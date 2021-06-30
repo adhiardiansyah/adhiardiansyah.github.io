@@ -97,5 +97,9 @@ function submitForm(e) {
           From: "adhiardiansyah23@gmail.com",
           Subject: `${nama} mengirim anda pesan`,
           Body: `Nama : ${nama} <br/> Email: ${emailnya} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
-      }).then((message) => alert("Pesan berhasil dikirim."))
+      }).then((message) => Swal.fire(
+        'Sukses!',
+        'Pesan berhasil dikirim!',
+        'success'
+      ))
   }
