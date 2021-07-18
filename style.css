@@ -138,6 +138,9 @@ section .title::after {
   cursor: pointer;
   display: none;
 }
+.menu-btn .fas.fa-bars.active {
+  color: #111;
+}
 .scroll-up-btn {
   position: fixed;
   height: 45px;
