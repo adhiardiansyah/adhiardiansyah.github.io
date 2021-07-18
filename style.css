@@ -649,7 +649,7 @@ footer span a {
 footer span a:hover {
   text-decoration: underline;
 }
-.footer .tulisan {
+/* .footer .tulisan {
   opacity: 0;
   transform: translate(-23px, 0);
   transition: 1.5s;
@@ -662,7 +662,7 @@ footer span a:hover {
 .footer .kanan {
   transform: translate(23px, 0);
   display: inline-block;
-}
+} */
 
 /* responsive media query start */
 @media (max-width: 1300px) {
