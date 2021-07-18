@@ -114,10 +114,11 @@ $(document).ready(function () {
     });
 
     // toggle menu/navbar script
-    $('.menu-btn').click(function (e) {
+    $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
-
+    });
+    $('.page-scroll').click(function (e) {
         var tujuan = $(this).attr('href'); //ambil isi href
         var elemenTujuan = $(tujuan); //tangkap elemen yang bersangkutan
 

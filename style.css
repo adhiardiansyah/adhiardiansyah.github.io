@@ -138,12 +138,6 @@ section .title::after {
   cursor: pointer;
   display: none;
 }
-.menu-btn:hover {
-  color: crimson;
-}
-.menu-btn .fas.fa-bars.active {
-  color: #111;
-}
 .scroll-up-btn {
   position: fixed;
   height: 45px;
@@ -716,6 +710,9 @@ footer span a:hover {
     margin: 20px 0;
     font-size: 25px;
     color: #111;
+  }
+  .navbar .menu.active li a:hover {
+    color: crimson;
   }
   .home .home-content .text-2 {
     font-size: 60px;
