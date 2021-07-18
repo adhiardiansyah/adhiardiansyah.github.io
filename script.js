@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    $(window).on('load',function () {
+        // parallax
+        $('.home .home-content .teks-home').each(function(i) {
+            setTimeout(function() {
+                $('.home .home-content .teks-home').eq(i).addClass('muncul');
+            }, 500 * i);
+        });
+    });
+
     $(window).scroll(function () {
         // sticky navbar on scroll script
         if (this.scrollY > 20) {
@@ -12,6 +21,74 @@ $(document).ready(function () {
             $('.scroll-up-btn').addClass("show");
         } else {
             $('.scroll-up-btn').removeClass("show");
+        }
+
+        // parallax
+        var wScroll = $(this).scrollTop();
+
+        // home
+        $('.home a').css({
+            'transform' : 'translate(0px, '+ wScroll/1.3 +'%)'
+        });
+
+        // about
+        if (wScroll > $('.about').offset().top - 400) {
+            $('.about .about-content .column').each(function(i) {
+                setTimeout(function() {
+                    $('.about .about-content .column').eq(i).addClass('muncul');
+                }, 500 * i);
+            });
+        }
+
+        // services
+        if (wScroll > $('.services').offset().top - 400) {
+            $('.services .serv-content .card .box').each(function(i) {
+                setTimeout(function() {
+                    $('.services .serv-content .card .box').eq(i).addClass('muncul');
+                }, 500 * i);
+            });
+        }
+
+        // skills
+        if (wScroll > $('.skills').offset().top - 400) {
+            $('.skills .skills-content .left').addClass('muncul');
+        }
+        if (wScroll > $('.skills').offset().top - 400) {
+            $('.skills .skills-content .right .bars').each(function(i) {
+                setTimeout(function() {
+                    $('.skills .skills-content .right .bars').eq(i).addClass('muncul');
+                }, 500 * i);
+            });
+        }
+
+        // portfolio
+        if (wScroll > $('.portfolio').offset().top - 400) {
+            $('.portfolio .carousel .card .box').each(function(i) {
+                setTimeout(function() {
+                    $('.portfolio .carousel .card .box').eq(i).addClass('muncul');
+                }, 500 * (i-3));
+            });
+        }
+
+        // contact
+        if (wScroll > $('.contact').offset().top - 400) {
+            $('.contact .contact-content .left').each(function(i) {
+                setTimeout(function() {
+                    $('.contact .contact-content .left').eq(i).addClass('muncul');
+                }, 500 * i);
+            });
+        }
+        if (wScroll > $('.contact').offset().top - 400) {
+            $('.contact .right').each(function(i) {
+                setTimeout(function() {
+                    $('.contact .right').eq(i).addClass('muncul');
+                }, 500 * i);
+            });
+        }
+
+        // footer
+        if (wScroll > $('.footer').offset().top - 650) {
+            $('.footer .tulisan').addClass('muncul');
         }
     });
 

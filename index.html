@@ -45,12 +45,17 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Halo, namaku</div>
-                <div class="text-2">Adhi Ardiansyah</div>
-                <div class="text-3">Dan aku seorang <span class="typing"></span></div>
-                <a href="https://smarturl.it/adhiardiansyah" target="_blank">Media Sosial</a>
-                <br>
-                <a href="https://sociabuzz.com/adhiardiansyah/donate" target="_blank">Beri Dukungan</a>
+                <div class="teks-home">
+                    <div class="teks text-1">Halo, namaku</div>
+                    <div class="teks text-2">Adhi Ardiansyah</div>
+                    <div class="teks text-3">Dan aku seorang <span class="typing"></span></div>
+                </div>
+                <div class="teks-home">
+                    <a href="https://smarturl.it/adhiardiansyah" target="_blank">Media Sosial</a>
+                </div>
+                <div class="teks-home">
+                    <a href="https://sociabuzz.com/adhiardiansyah/donate" target="_blank">Beri Dukungan</a>
+                </div>
             </div>
         </div>
     </section>
@@ -198,21 +203,21 @@
                     <div class="text">Hubungi Saya</div>
                     <p>Berikut adalah informasi tentang kontak saya</p>
                     <div class="icons">
-                        <div class="row">
+                        <div class="left row">
                             <i class="fas fa-user"></i>
                             <div class="info">
                                 <div class="head">Nama</div>
                                 <div class="sub-title">Adhi Ardiansyah</div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="left row">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
                                 <div class="head">Alamat</div>
                                 <div class="sub-title">Karanganyar</div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="left row">
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
@@ -226,20 +231,20 @@
                     <div class="text">Kirim Pesan</div>
                     <form method="POST" class="contact-form">
                         <div class="fields">
-                            <div class="field name">
+                            <div class="right field name">
                                 <input type="text" class="nama" placeholder="Nama" required>
                             </div>
-                            <div class="field email">
+                            <div class="right field email">
                                 <input type="email" class="emailnya" placeholder="Email" required>
                             </div>
                         </div>
-                        <div class="field">
+                        <div class="right field">
                             <input type="text" class="subject" placeholder="Judul" required>
                         </div>
-                        <div class="field textarea">
+                        <div class="right field textarea">
                             <textarea cols="30" rows="10" class="message" placeholder="Pesan.." required></textarea>
                         </div>
-                        <div class="button">
+                        <div class="right button">
                             <button type="submit">Kirim</button>
                         </div>
                     </form>
@@ -249,9 +254,9 @@
     </section>
 
     <!-- footer section start -->
-    <footer>
-        <span>Created By <a href="https://adhiardiansyah.github.io">Adhi Ardiansyah</a> | <span
-                class="far fa-copyright"></span> 2021 All rights reserved.</span>
+    <footer class="footer" id="footer">
+        <p><span class="tulisan kiri">Created By <a href="https://adhiardiansyah.github.io">Adhi Ardiansyah</a> </span> | <span
+                class="tulisan kanan far fa-copyright"></span> <span class="tulisan kanan">2021 All rights reserved.</span></p>
     </footer>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>

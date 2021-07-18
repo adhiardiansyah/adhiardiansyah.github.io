@@ -179,6 +179,7 @@ section .title::after {
   background-size: cover;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
 }
 .home .max-width {
   margin: auto 0 auto 30px;
@@ -215,8 +216,29 @@ section .title::after {
   color: crimson;
   background: none;
 }
+.home .home-content .teks-home {
+  opacity: 0;
+  transform: translate(0, 350px);
+  transition: 1.5s;
+}
+.home .home-content .teks-home.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 /* about section styling */
+.about .about-content .column {
+  opacity: 0;
+  transform: translate(-100px, 0);
+  transition: 1.5s;
+}
+.about .about-content .column.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about .about-content .right {
+  transform: translate(100px, 0);
+}
 .about .about-content .left {
   width: 45%;
 }
@@ -284,7 +306,14 @@ section .title::after {
   background: crimson;
 }
 .services .serv-content .card .box {
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: 1.5s;
+}
+.services .serv-content .card .box.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .services .serv-content .card:hover .box {
   transform: scale(1.05);
@@ -310,6 +339,15 @@ section .title::after {
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
+}
+.skills .skills-content .left {
+  opacity: 0;
+  transform: translate(-100px, 0) rotate(15deg);
+  transition: 1.5s;
+}
+.skills .skills-content .left.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .skills .skills-content .left .text {
   font-size: 20px;
@@ -337,6 +375,13 @@ section .title::after {
 }
 .skills .skills-content .right .bars {
   margin-bottom: 15px;
+  opacity: 0;
+  transform: translate(0, 350px);
+  transition: 1.5s;
+}
+.skills .skills-content .right .bars.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .skills .skills-content .right .info {
   display: flex;
@@ -390,7 +435,7 @@ section .title::after {
   padding: 25px 35px;
   text-align: center;
   overflow: hidden;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 .portfolio .carousel .card:hover {
   background: crimson;
@@ -400,7 +445,14 @@ section .title::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: 1.5s;
+}
+.portfolio .carousel .card .box.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .portfolio .carousel .card:hover .box {
   transform: scale(1.05);
@@ -416,7 +468,7 @@ section .title::after {
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid crimson;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 .portfolio .carousel .card:hover img {
   border-color: #fff;
@@ -430,7 +482,7 @@ section .title::after {
   margin-top: 10px;
   border-radius: 6px;
   border: 2px solid rgb(94, 91, 255);
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .owl-dots {
@@ -444,7 +496,7 @@ section .title::after {
   outline: none !important;
   border-radius: 50%;
   border: 2px solid crimson !important;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 .owl-dot.active {
   width: 35px;
@@ -464,6 +516,15 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
+.contact .contact-content .left {
+  opacity: 0;
+  transform: translate(-100px, 0) rotate(45deg);
+  transition: 1s;
+}
+.contact .contact-content .left.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 .contact .contact-content .left p {
   text-align: justify;
 }
@@ -474,6 +535,10 @@ section .title::after {
   display: flex;
   height: 65px;
   align-items: center;
+  transform: translate(0, 50px);
+}
+.contact .contact-content .row.muncul {
+  transform: translate(0, 0);
 }
 .contact .contact-content .row .info {
   margin-left: 30px;
@@ -491,6 +556,23 @@ section .title::after {
 }
 .contact .contact-content .info .sub-title a {
   color: #333;
+}
+.contact .right {
+  opacity: 0;
+  transform: translate(100px, 0) rotate(45deg);
+  transition: 1s;
+}
+.contact .right.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.contact .field,
+.contact .button {
+  transform: translate(100px, 0);
+}
+.contact .field.muncul,
+.contact .button.muncul {
+  transform: translate(0, 0);
 }
 .contact .right form .fields {
   display: flex;
@@ -566,6 +648,20 @@ footer span a {
 }
 footer span a:hover {
   text-decoration: underline;
+}
+.footer .tulisan {
+  opacity: 0;
+  transform: translate(-100px, 0);
+  transition: 1.5s;
+  display: inline-block;
+}
+.footer .tulisan.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.footer .kanan {
+  transform: translate(100px, 0);
+  display: inline-block;
 }
 
 /* responsive media query start */
