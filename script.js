@@ -17,20 +17,27 @@ $(document).ready(function () {
 
     // slide-up script
     $('.scroll-up-btn').click(function () {
-        $('html').animate({ scrollTop: 0 });
+        $('html').animate({ scrollTop: 0 }, 1250, 'easeInOutExpo');
         // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
 
     $('.navbar .menu li a').click(function () {
         // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
+        $('html').css("scrollBehavior", "auto");
     });
 
     // toggle menu/navbar script
-    $('.menu-btn').click(function () {
+    $('.menu-btn').click(function (e) {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
+
+        var tujuan = $(this).attr('href'); //ambil isi href
+        var elemenTujuan = $(tujuan); //tangkap elemen yang bersangkutan
+
+        $('html').animate({ scrollTop: elemenTujuan.offset().top }, 1250, 'easeInOutExpo');
+
+        e.preventDefault();
     });
 
     // typing text animation script
