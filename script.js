@@ -90,6 +90,7 @@ $(document).ready(function () {
         if (wScroll > $('.footer').offset().top - 650) {
             $('.footer .tulisan').addClass('muncul');
         }
+        
     });
 
     // slide-up script
