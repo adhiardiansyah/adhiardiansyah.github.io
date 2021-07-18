@@ -138,6 +138,9 @@ section .title::after {
   cursor: pointer;
   display: none;
 }
+.menu-btn:hover {
+  color: crimson;
+}
 .menu-btn .fas.fa-bars.active {
   color: #111;
 }

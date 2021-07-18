@@ -1,12 +1,21 @@
-$(document).ready(function () {
-    $(window).on('load',function () {
-        // parallax
-        $('.home .home-content .teks-home').each(function(i) {
-            setTimeout(function() {
-                $('.home .home-content .teks-home').eq(i).addClass('muncul');
-            }, 500 * i);
-        });
+$(window).on('load',function () {
+    // parallax
+    $('.home .home-content .teks-home').each(function(i) {
+        setTimeout(function() {
+            $('.home .home-content .teks-home').eq(i).addClass('muncul');
+        }, 500 * i);
     });
+});
+
+$(document).ready(function () {
+    // $(window).on('load',function () {
+    //     // parallax
+    //     $('.home .home-content .teks-home').each(function(i) {
+    //         setTimeout(function() {
+    //             $('.home .home-content .teks-home').eq(i).addClass('muncul');
+    //         }, 500 * i);
+    //     });
+    // });
 
     $(window).scroll(function () {
         // sticky navbar on scroll script
