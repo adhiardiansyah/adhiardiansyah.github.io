@@ -237,7 +237,7 @@ section .title::after {
   transform: translate(0, 0);
 }
 .about .about-content .right {
-  transform: translate(100px, 0);
+  transform: translate(23px, 0);
 }
 .about .about-content .left {
   width: 45%;
@@ -518,7 +518,7 @@ section .title::after {
 }
 .contact .contact-content .left {
   opacity: 0;
-  transform: translate(-100px, 0) rotate(45deg);
+  transform: translate(-100px);
   transition: 1s;
 }
 .contact .contact-content .left.muncul {
@@ -559,7 +559,7 @@ section .title::after {
 }
 .contact .right {
   opacity: 0;
-  transform: translate(100px, 0) rotate(45deg);
+  transform: translate(23px, 0);
   transition: 1s;
 }
 .contact .right.muncul {
@@ -568,7 +568,7 @@ section .title::after {
 }
 .contact .field,
 .contact .button {
-  transform: translate(100px, 0);
+  transform: translate(0, 50px);
 }
 .contact .field.muncul,
 .contact .button.muncul {
@@ -651,7 +651,7 @@ footer span a:hover {
 }
 .footer .tulisan {
   opacity: 0;
-  transform: translate(-100px, 0);
+  transform: translate(-23px, 0);
   transition: 1.5s;
   display: inline-block;
 }
@@ -660,7 +660,7 @@ footer span a:hover {
   transform: translate(0, 0);
 }
 .footer .kanan {
-  transform: translate(100px, 0);
+  transform: translate(23px, 0);
   display: inline-block;
 }
 
