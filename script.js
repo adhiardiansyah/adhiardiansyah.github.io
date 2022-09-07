@@ -172,10 +172,10 @@ function submitForm(e) {
     e.preventDefault();
 
     // Get input Values
-    let nama = document.querySelector(".nama").value;
-    let emailnya = document.querySelector(".emailnya").value;
-    let subject = document.querySelector(".subject").value;
-    let message = document.querySelector(".message").value;
+    const nama = document.querySelector(".nama").value;
+    const emailnya = document.querySelector(".emailnya").value;
+    const subject = document.querySelector(".subject").value;
+    const message = document.querySelector(".message").value;
 
     document.querySelector(".contact-form").reset();
 
@@ -186,7 +186,7 @@ function sendEmail(nama, emailnya, subject, message) {
     Email.send({
         Host: "smtp.gmail.com",
         Username: "adhiardiansyah23@gmail.com",
-        Password: "untlcyonvnwwnpnd",
+        Password: "Adhie313Sullivan",
         To: "adhiardiansyah23@gmail.com",
         From: "adhiardiansyah23@gmail.com",
         Subject: `${nama} mengirim anda pesan`,
