@@ -188,7 +188,7 @@ function sendEmail(nama, emailnya, subject, message) {
         Username: "adhiardiansyah23@gmail.com",
         Password: "Adhie313Sullivan",
         To: "adhiardiansyah23@gmail.com",
-        From: "adhiardiansyah23@gmail.com",
+        From: emailnya,
         Subject: `${nama} mengirim anda pesan`,
         Body: `Nama : ${nama} <br/> Email: ${emailnya} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
     }).then((message) => Swal.fire(
