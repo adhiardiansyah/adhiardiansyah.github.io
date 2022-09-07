@@ -184,16 +184,19 @@ function submitForm(e) {
 
 function sendEmail(nama, emailnya, subject, message) {
     Email.send({
-        SecureToken: "2c89c659-10f3-4db0-b752-0870e9908cb0",
+        SecureToken: "5483a6f0-ab67-4824-8466-5fa476e59b54",
         To: "adhiardiansyah23@gmail.com",
         From: emailnya,
         Subject: `${nama} mengirim anda pesan`,
         Body: `Nama : ${nama} <br/> Email: ${emailnya} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
-    }).then((message) => Swal.fire(
-        'Sukses!',
-        'Pesan berhasil dikirim!',
-        'success'
-    ))
+    }).then((message) => {
+        console.log(message)
+        Swal.fire(
+            'Sukses!',
+            'Pesan berhasil dikirim!',
+            'success'
+        )
+    })
 }
 
 (function () {
