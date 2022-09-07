@@ -184,9 +184,9 @@ function submitForm(e) {
 
 function sendEmail(nama, emailnya, subject, message) {
     Email.send({
-        Host: "smtp.gmail.com",
+        Host: "smtp.elasticemail.com",
         Username: "adhiardiansyah23@gmail.com",
-        Password: "Adhie313Sullivan",
+        Password: "CC5D30E59C9972153C72A5427C86AE366568",
         To: "adhiardiansyah23@gmail.com",
         From: emailnya,
         Subject: `${nama} mengirim anda pesan`,
