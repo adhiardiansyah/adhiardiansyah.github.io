@@ -188,15 +188,23 @@ function sendEmail(nama, emailnya, subject, message) {
         Username: "adhiardiansyah23@gmail.com",
         Password: "0B3567DF1970328DF8B5882E9942F1AA1BB4",
         To: "adhiardiansyah23@gmail.com",
-        From: emailnya,
+        From: "adhiardiansyah23@gmail.com",
         Subject: `${nama} mengirim anda pesan`,
         Body: `Nama : ${nama} <br/> Email: ${emailnya} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
     }).then((message) => {
-        Swal.fire(
-            'Sukses!',
-            'Pesan berhasil dikirim!',
-            'success'
-        )
+        if (message === 'OK') {
+            Swal.fire(
+                'Sukses!',
+                'Pesan berhasil dikirim!',
+                'success'
+            )
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!'
+            })
+        }
     })
 }
 
