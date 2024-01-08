@@ -349,13 +349,15 @@
     <!-- footer section start -->
     <footer class="footer" id="footer">
         <span class="tulisan kiri">Created By <a href="https://adhiardiansyah.github.io">Adhi Ardiansyah</a> </span> |
-        <span class="tulisan kanan far fa-copyright"></span> <span class="tulisan kanan">2023 All rights
-            reserved.</span>
+        <span class="tulisan kanan far fa-copyright"></span> <span class="tulisan kanan"><span id="year"></span> All rights reserved.</span>
     </footer>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
