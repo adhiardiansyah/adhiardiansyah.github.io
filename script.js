@@ -8,15 +8,6 @@ $(window).on('load',function () {
 });
 
 $(document).ready(function () {
-    // $(window).on('load',function () {
-    //     // parallax
-    //     $('.home .home-content .teks-home').each(function(i) {
-    //         setTimeout(function() {
-    //             $('.home .home-content .teks-home').eq(i).addClass('muncul');
-    //         }, 500 * i);
-    //     });
-    // });
-
     $(window).scroll(function () {
         // sticky navbar on scroll script
         if (this.scrollY > 20) {
@@ -128,15 +119,8 @@ $(document).ready(function () {
     });
 
     // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["Software Engineer", "Designer", "Instagram Filter Creator"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: ["Software Engineer", "Designer", "Instagram Filter Creator"],
+    new Typed(".typing", {
+        strings: ["Software Engineer", "Creator", "Social Media Enthusiast"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -173,16 +157,16 @@ function submitForm(e) {
 
     // Get input Values
     const nama = document.querySelector(".nama").value;
-    const emailnya = document.querySelector(".emailnya").value;
+    const email = document.querySelector(".email").value;
     const subject = document.querySelector(".subject").value;
     const message = document.querySelector(".message").value;
 
     document.querySelector(".contact-form").reset();
 
-    sendEmail(nama, emailnya, subject, message);
+    sendEmail(nama, email, subject, message);
 }
 
-function sendEmail(nama, emailnya, subject, message) {
+function sendEmail(nama, email, subject, message) {
     Email.send({
         Host : "smtp.elasticemail.com",
         Username: "adhiardiansyah23@gmail.com",
@@ -190,7 +174,7 @@ function sendEmail(nama, emailnya, subject, message) {
         To: "adhiardiansyah23@gmail.com",
         From: "adhiardiansyah23@gmail.com",
         Subject: `${nama} mengirim anda pesan`,
-        Body: `Nama : ${nama} <br/> Email: ${emailnya} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
+        Body: `Nama : ${nama} <br/> Email: ${email} <br/> Judul: ${subject} <br/> Pesan: ${message}`,
     }).then((message) => {
         if (message === 'OK') {
             Swal.fire(
