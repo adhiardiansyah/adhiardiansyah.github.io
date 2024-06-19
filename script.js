@@ -125,6 +125,12 @@ $(document).ready(function () {
         backSpeed: 60,
         loop: true
     });
+    new Typed(".typing-2", {
+        strings: ["Software Engineer", "Creator", "Social Media Enthusiast"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
 
     // owl carousel script
     $('.carousel').owlCarousel({
