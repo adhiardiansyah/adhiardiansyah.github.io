@@ -180,7 +180,6 @@ div#loom-companion-mv3 section {
   color: #fff;
   min-height: 500px;
   background-size: cover;
-  background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
   overflow: hidden;
 }
@@ -410,6 +409,9 @@ div#loom-companion-mv3 section {
   top: 0;
   background: crimson;
 }
+.skills-content .right .lead::before {
+  width: 100%;
+}
 .skills-content .right .web::before {
   width: 100%;
 }
@@ -485,16 +487,6 @@ div#loom-companion-mv3 section {
   margin-top: 10px;
   border-radius: 6px;
   border: 2px solid rgb(94, 91, 255);
-  /* transition: all 0.3s ease; */
-}
-.portfolio .carousel .card .kunjungi2 {
-  display: inline-block;
-  background: black;
-  color: #fff;
-  padding: 6px 18px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: 2px solid black;
   /* transition: all 0.3s ease; */
 }
 .owl-dots {
