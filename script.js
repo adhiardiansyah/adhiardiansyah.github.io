@@ -163,7 +163,7 @@ function submitForm(e) {
 
     // Get input Values
     const nama = document.querySelector(".nama").value;
-    const email = document.querySelector(".email").value;
+    const email = document.querySelector("#email").value;
     const subject = document.querySelector(".subject").value;
     const message = document.querySelector(".message").value;
 
