@@ -1,548 +1,831 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adhi Ardiansyah</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/1751867a30.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link rel="shortcut icon" href="images/icon.png" />
-  </head>
-
-  <body>
-    <div id="preloader"></div>
-    <div class="scroll-up-btn">
-      <i class="fas fa-angle-up"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhi Ardiansyah | Software Engineer</title>
+    <meta name="description" content="Adhi Ardiansyah - Software Engineer with 4 years of experience. Specializing in software development, social media management, and content creation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon.png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
-    <nav class="navbar">
-      <div class="max-width">
-        <div class="logo">
-          <a href="https://adhiardiansyah.github.io">Ad<span>hi</span></a>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Adhi</span>
+                <span class="logo-dot">.</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="https://adhiardiansyah.github.io/cv" target="_blank" class="btn btn-outline hidden-sm">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
-        <ul class="menu">
-          <li><a href="#home" class="menu-btn page-scroll">Home</a></li>
-          <li><a href="#about" class="menu-btn page-scroll">About Me</a></li>
-          <li><a href="#services" class="menu-btn page-scroll">Services</a></li>
-          <li><a href="#skills" class="menu-btn page-scroll">Skills</a></li>
-          <li>
-            <a href="#portfolio" class="menu-btn page-scroll">Portfolio</a>
-          </li>
-          <li><a href="#contact" class="menu-btn page-scroll">Contact</a></li>
-        </ul>
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
-      </div>
     </nav>
 
-    <!-- home section start -->
-    <section class="home" id="home">
-      <div class="max-width">
-        <div class="home-content">
-          <div class="teks-home">
-            <div class="teks text-1">Hi, my name is</div>
-            <div class="teks text-2">Adhi Ardiansyah</div>
-            <div class="teks text-3">
-              And I'm a <span class="typing"></span>
-            </div>
-          </div>
-          <div class="teks-home">
-            <a href="https://linktr.ee/adhi_ardiansyah" target="_blank"
-              >Social Media</a
-            >
-          </div>
-          <div class="teks-home">
-            <a
-              href="https://sociabuzz.com/adhiardiansyah/donate"
-              target="_blank"
-              >Support Me</a
-            >
-          </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- about section start -->
-    <section class="about" id="about">
-      <div class="max-width">
-        <h2 class="title">About Me</h2>
-        <div class="about-content">
-          <div class="column left">
-            <img src="images/profile-2.jpg" alt="" />
-          </div>
-          <div class="column right">
-            <div class="text">I'm Adhi, a <span class="typing-2"></span></div>
-            <p>
-              A software engineer with 4 years of experience working in the
-              information technology and services industry. Graduated from
-              Universitas Sebelas Maret majoring in Informatics Engineering.
-              Interested in software development.
-            </p>
-            <a href="https://adhiardiansyah.github.io/cv" target="_blank"
-              >My CV</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- services section start -->
-    <section class="services" id="services">
-      <div class="max-width">
-        <h2 class="title">Services</h2>
-        <div class="serv-content">
-          <div class="card">
-            <div class="box">
-              <i class="fa fa-globe"></i>
-              <div class="text">Software Development</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-icons"></i>
-              <div class="text">Social Media Management</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-photo-video"></i>
-              <div class="text">Content Creation</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- skills section start -->
-    <section class="skills" id="skills">
-      <div class="max-width">
-        <h2 class="title">Skills</h2>
-        <div class="skills-content">
-          <div class="column left">
-            <div class="text">My Skills and Experiences.</div>
-            <p>Here are some of the skills and experiences I have so far.</p>
-          </div>
-          <div class="column right">
-            <div class="bars">
-              <div class="info">
-                <span>Team Lead</span>
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="line lead"></div>
-            </div>
-            <div class="bars">
-              <div class="info">
-                <span>Software Development</span>
-                <span><i class="fa fa-globe"></i></span>
-              </div>
-              <div class="line web"></div>
-            </div>
-            <div class="bars">
-              <div class="info">
-                <span>Database Optimization</span>
-                <span><i class="fas fa-database"></i></span>
-              </div>
-              <div class="line data"></div>
-            </div>
-            <div class="bars">
-              <div class="info">
-                <span>Content Creation</span>
-                <span><i class="fas fa-photo-video"></i></span>
-              </div>
-              <div class="line data"></div>
-            </div>
-            <div class="bars">
-              <div class="info">
-                <span>Social Media Management</span>
-                <span
-                  ><i class="fas fa-heart"></i> <i class="fas fa-comment"></i>
-                  <i class="fas fa-share"></i
-                ></span>
-              </div>
-              <div class="line medsos"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- portfolio section start -->
-    <section class="portfolio" id="portfolio">
-      <div class="max-width">
-        <h2 class="title">Portfolio</h2>
-        <div class="carousel owl-carousel">
-          <div class="card">
-            <div class="box">
-              <img src="images/pose.png" alt="POSe" />
-              <div class="text">POSe</div>
-              <p>
-                POSe is a POS platform that makes your business transactions
-                easier. With support for various payment methods, users can make
-                transactions using QRIS, Contactless, and Visa and MasterCard
-                debit and credit cards.
-              </p>
-              <div>
-                <a class="kunjungi" href="https://pose.co.id" target="_blank"
-                  >Visit</a
-                >
-                <a
-                  class="kunjungi"
-                  title="Playstore"
-                  href="https://play.google.com/store/apps/details?id=id.co.pcsindonesia.pose"
-                  target="_blank"
-                  ><i class="fab fa-google-play"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/ky.png" alt="KerjaYuk!" />
-              <div class="text">KerjaYuk!</div>
-              <p>
-                KerjaYuk! is a web-based application used for employee
-                attendance. KerjaYuk! equipped with features to make it easier
-                for employees to submit reimbursement, overtime, permission and
-                sickness so that, this application is expected to make it easier
-                for HRGAF to record and report later.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://kerjayuk.pcsindonesia.com"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/memo-mentor.png" alt="Memo Mentor" />
-              <div class="text">Memo Mentor</div>
-              <p>
-                MEMO is designed to improve MERi efficiency during merchant
-                visits. It features MERi assignment, EDC stock management, and
-                displays detailed information about EDCs located at all service
-                points.
-              </p>
-              <br>
-              <p>
-                MENTOR is a web-based application equipped with various features
-                such as MERi performance monitoring, ticket checking, and EDC
-                stock management. All of these features are designed to increase
-                MERi's efficiency and productivity when conducting merchant
-                visits.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://memo.pcsindonesia.com"
-                  target="_blank"
-                  >Visit</a
-                >
-                <a
-                  class="kunjungi"
-                  title="Playstore"
-                  href="https://play.google.com/store/apps/details?id=id.co.pcsindonesia.memo"
-                  target="_blank"
-                  ><i class="fab fa-google-play"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/invera.png" alt="INVERA" />
-              <div class="text">INVERA</div>
-              <p>Control and monitor the company's inventory and assets.</p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://invera.pcsindonesia.com"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/tap.png" alt="TAP" />
-              <div class="text">TAP</div>
-              <p>
-                A platform used by sales team to submit their merchant
-                acquisition's form.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://tap.pcsindonesia.com"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/tap.png" alt="TAP Admin" />
-              <div class="text">TAP Admin</div>
-              <p>
-                Track and monitor sales team's progress based on their form
-                submissions.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://tap-wa.pcsindonesia.com"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/hisya.png" alt="Hisya" />
-              <div class="text">Hisya Medical Record</div>
-              <p>A medical record application.</p>
-              <div>
-                <a class="kunjungi" href="https://app.hisya.id" target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/lauretta.png" alt="Lauretta" />
-              <div class="text">Lauretta Property Management (Singapore)</div>
-              <p>
-                Lauretta Property Management App is a dashboard that will
-                consume data from 1 shopping malls cameras and use it to
-                generate dashboards for property management and retail
-                analytics.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://demo.lauretta.solutions"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/aladinmall.png" alt="Aladin Mall" />
-              <div class="text">Aladin Mall Back Office & Seller Center</div>
-              <p>
-                E-Commerce application on the Admin and Seller side for Aladin
-                Mall by Misteraladin (MNC).
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://www.moca.aladinmall.id"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/bpn.png" alt="Badan Pertanahan Nasional" />
-              <div class="text">BPN KALTIM (SIAP UKUR, LOKET ONLINE, PTSL)</div>
-              <p>
-                An application that aims to facilitate the management of
-                measurement files, as an alternative strategy to reduce
-                obstacles that may occur in measurement work.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://siapukur.atrbpnkaltim.net"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/plo.png" alt="Paperless Office" />
-              <div class="text">Paperless Office</div>
-              <p>Electoric Office application to reduce paper usage.</p>
-              <div>
-                <a
-                  class="kunjungi"
-                  href="https://plo-btn.eoviz.com"
-                  target="_blank"
-                  >Visit</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/sebulanmenjadi.png" alt="Sebulan Menjadi" />
-              <div class="text">Sebulan Menjadi</div>
-              <p>
-                One of the programs under the Global Millennial Group which acts
-                as a forum for students in Indonesia to experience how to study
-                in a department accompanied by mentoring and learning agendas
-                according to the courses of that department.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  title="Detail"
-                  href="https://www.linkedin.com/posts/adhiardiansyah_sebulan-menjadi-activity-6856083142823043072-S2_N"
-                  target="_blank"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="images/beglobal.png" alt="Be Global Indonesia" />
-              <div class="text">Be Global Indonesia</div>
-              <p>
-                One of the programs under the Global Millennial Group that moves
-                to develop the potential of Indonesian youth, as well as
-                encourage them to go international, by providing the latest
-                information related to internships, volunteers, scholarships,
-                competitions, and various other opportunities accompanied by
-                mentoring and agendas. self-development.
-              </p>
-              <div>
-                <a
-                  class="kunjungi"
-                  title="Detail"
-                  href="https://www.linkedin.com/posts/adhiardiansyah_be-global-indonesia-activity-6875328628922707968-VXTh"
-                  target="_blank"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-      <div class="max-width">
-        <h2 class="title">Contact</h2>
-        <div class="contact-content">
-          <div class="column left">
-            <div class="text">Contact Me</div>
-            <p>Here is the information about my contact</p>
-            <div class="icons">
-              <div class="left row">
-                <i class="fas fa-user"></i>
-                <div class="info">
-                  <div class="head">Name</div>
-                  <div class="sub-title">Adhi Ardiansyah</div>
+        
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-title">
+                    <span class="name">Adhi Ardiansyah</span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-prefix">I'm a</span>
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
                 </div>
-              </div>
-              <div class="left row">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="info">
-                  <div class="head">Address</div>
-                  <div class="sub-title">Indonesia</div>
+                <p class="hero-description">
+                    A passionate software engineer crafting digital experiences that make a difference. 
+                    I build scalable web applications and create engaging content.
+                </p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Get In Touch</span>
+                    </a>
                 </div>
-              </div>
-              <div class="left row">
-                <i class="fas fa-envelope"></i>
-                <div class="info">
-                  <div class="head">Email</div>
-                  <div class="sub-title">
-                    <a href="mailto:adhiardiansyah23@gmail.com"
-                      >adhiardiansyah23@gmail.com</a
-                    >
-                  </div>
+                <div class="hero-socials">
+                    <a href="https://linktr.ee/adhi_ardiansyah" target="_blank" class="social-link" aria-label="Linktree">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/adhiardiansyah" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/adhiardiansyah" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/adhiardiansyah" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="column right">
-            <div class="text">Send Message</div>
-            <form method="POST" class="contact-form">
-              <div class="fields">
-                <div class="right field name">
-                  <input type="text" class="nama" placeholder="Name" required />
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="image-wrapper">
+                    <div class="image-bg"></div>
+                    <img src="images/profile-2.png" alt="Adhi Ardiansyah" class="profile-img">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>4+ Years Exp.</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-check-circle"></i>
+                        <span>13+ Projects</span>
+                    </div>
                 </div>
-                <div class="right field email">
-                  <input
-                    type="email"
-                    id="email"
-                    class="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="right field">
-                <input
-                  type="text"
-                  class="subject"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              <div class="right field textarea">
-                <textarea
-                  cols="30"
-                  rows="10"
-                  class="message"
-                  placeholder="Message.."
-                  required
-                ></textarea>
-              </div>
-              <div class="right button">
-                <button type="submit">Send</button>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
     </section>
 
-    <!-- footer section start -->
-    <footer class="footer" id="footer">
-      <span class="tulisan kiri"
-        >Created By
-        <a href="https://adhiardiansyah.github.io">Adhi Ardiansyah</a>
-      </span>
-      | <span class="tulisan kanan far fa-copyright"></span>
-      <span class="tulisan kanan"
-        ><span id="year"></span> All rights reserved.</span
-      >
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Get to Know Me</h2>
+                <p class="section-subtitle">Passionate about building products that make an impact</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image-wrapper" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="images/profile-1.png" alt="About Adhi">
+                        <div class="experience-badge">
+                            <span class="years">4+</span>
+                            <span class="text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content" data-aos="fade-left">
+                    <h3 class="about-title">
+                        I'm a <span class="highlight">Software Engineer</span> with a passion for innovation
+                    </h3>
+                    <p class="about-text">
+                        A dedicated software engineer with 4 years of experience working in the information technology 
+                        and services industry. I graduated from Universitas Sebelas Maret majoring in Informatics Engineering 
+                        and have been passionate about creating digital solutions ever since.
+                    </p>
+                    <p class="about-text">
+                        My expertise spans across software development, database optimization, and team leadership. 
+                        I enjoy tackling complex problems and turning ideas into reality through elegant code and 
+                        thoughtful design.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">13+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-actions">
+                        <a href="https://adhiardiansyah.github.io/cv" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="https://sociabuzz.com/adhiardiansyah/donate" target="_blank" class="btn btn-ghost">
+                            <i class="fas fa-heart"></i> Support Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">My Services</h2>
+                <p class="section-subtitle">Comprehensive solutions for your digital needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-badge">Popular</div>
+                    <div class="service-icon">
+                        <div class="icon-bg">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Software Development</h3>
+                    <p class="service-description">
+                        Building robust and scalable web applications using modern technologies. 
+                        From concept to deployment, I deliver high-quality software solutions.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Web Applications</li>
+                        <li><i class="fas fa-check"></i> API Development</li>
+                        <li><i class="fas fa-check"></i> Database Design</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <div class="icon-bg">
+                            <i class="fas fa-share-nodes"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Social Media Management</h3>
+                    <p class="service-description">
+                        Growing your brand presence across social platforms with strategic content 
+                        planning, engagement optimization, and analytics-driven decisions.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Content Strategy</li>
+                        <li><i class="fas fa-check"></i> Community Engagement</li>
+                        <li><i class="fas fa-check"></i> Analytics & Reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <div class="icon-bg">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Content Creation</h3>
+                    <p class="service-description">
+                        Creating compelling visual and written content that resonates with your 
+                        audience and drives meaningful engagement.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Video Production</li>
+                        <li><i class="fas fa-check"></i> Graphic Design</li>
+                        <li><i class="fas fa-check"></i> Copywriting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section-padding" id="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Skills & Abilities</h2>
+                <p class="section-subtitle">Technologies and skills I've mastered</p>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-left" data-aos="fade-right">
+                    <h3 class="skills-title">Technical Skills</h3>
+                    <p class="skills-description">
+                        My technical toolkit includes modern web technologies and frameworks. 
+                        I continuously learn and adapt to new technologies to deliver the best solutions.
+                    </p>
+                    
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">
+                                    <i class="fas fa-users"></i> Team Leadership
+                                </span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="95"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">
+                                    <i class="fas fa-globe"></i> Software Development
+                                </span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">
+                                    <i class="fas fa-database"></i> Database Optimization
+                                </span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">
+                                    <i class="fas fa-photo-video"></i> Content Creation
+                                </span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="80"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">
+                                    <i class="fas fa-hashtag"></i> Social Media Management
+                                </span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-right" data-aos="fade-left">
+                    <h3 class="skills-title">Tools & Technologies</h3>
+                    
+                    <div class="tech-stack">
+                        <!-- Languages -->
+                        <div class="tech-group">
+                            <span class="tech-label">Languages</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-golang"></i> Go</span>
+                                <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                                <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                                <span class="tech-tag"><i class="fab fa-js"></i> TypeScript</span>
+                                <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                                <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Frameworks -->
+                        <div class="tech-group">
+                            <span class="tech-label">Frameworks</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-wine-glass"></i> Gin</span>
+                                <span class="tech-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                                <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="tech-tag"><i class="fas fa-server"></i> Express</span>
+                                <span class="tech-tag"><i class="fas fa-code"></i> jQuery</span>
+                                <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                                <span class="tech-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                                <span class="tech-tag"><i class="fas fa-wind"></i> Tailwind</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Databases -->
+                        <div class="tech-group">
+                            <span class="tech-label">Databases</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                                <span class="tech-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                                <span class="tech-tag"><i class="fab fa-aws"></i> DynamoDB</span>
+                                <span class="tech-tag"><i class="fas fa-bolt"></i> Redis</span>
+                                <span class="tech-tag"><i class="fas fa-search"></i> Elastic</span>
+                            </div>
+                        </div>
+                        
+                        <!-- DevOps -->
+                        <div class="tech-group">
+                            <span class="tech-label">DevOps & Tools</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+                                <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+                                <span class="tech-tag"><i class="fab fa-google"></i> Pub/Sub</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="soft-skills">
+                        <h4>Soft Skills</h4>
+                        <div class="soft-skill-tags">
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Communication</span>
+                            <span class="tag">Teamwork</span>
+                            <span class="tag">Adaptability</span>
+                            <span class="tag">Time Management</span>
+                            <span class="tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A collection of projects I've worked on</p>
+            </div>
+            
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- POSe -->
+                <div class="portfolio-card" data-category="web mobile" data-aos="fade-up" data-aos-delay="0">
+                    <div class="portfolio-image">
+                        <img src="images/pose.png" alt="POSe">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://pose.co.id" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=id.co.pcsindonesia.pose" target="_blank" class="portfolio-link" title="Play Store">
+                                    <i class="fab fa-google-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">POS Platform</span>
+                        <h3 class="portfolio-title">POSe</h3>
+                        <p class="portfolio-description">A comprehensive POS platform supporting QRIS, Contactless, and card payments.</p>
+                    </div>
+                </div>
+                
+                <!-- KerjaYuk! -->
+                <div class="portfolio-card" data-category="web" data-aos="fade-up" data-aos-delay="50">
+                    <div class="portfolio-image">
+                        <img src="images/ky.png" alt="KerjaYuk!">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://kerjayuk.pcsindonesia.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">HR Management</span>
+                        <h3 class="portfolio-title">KerjaYuk!</h3>
+                        <p class="portfolio-description">Employee attendance system with reimbursement and overtime features.</p>
+                    </div>
+                </div>
+                
+                <!-- Memo Mentor -->
+                <div class="portfolio-card" data-category="web mobile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="images/memo-mentor.png" alt="Memo Mentor">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://memo.pcsindonesia.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=id.co.pcsindonesia.memo" target="_blank" class="portfolio-link" title="Play Store">
+                                    <i class="fab fa-google-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Field Operations</span>
+                        <h3 class="portfolio-title">Memo Mentor</h3>
+                        <p class="portfolio-description">EDC stock management and merchant visit tracking platform.</p>
+                    </div>
+                </div>
+                
+                <!-- INVERA -->
+                <div class="portfolio-card" data-category="web dashboard" data-aos="fade-up" data-aos-delay="150">
+                    <div class="portfolio-image">
+                        <img src="images/invera.png" alt="INVERA">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://invera.pcsindonesia.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Inventory System</span>
+                        <h3 class="portfolio-title">INVERA</h3>
+                        <p class="portfolio-description">Company inventory and asset control management system.</p>
+                    </div>
+                </div>
+                
+                <!-- TAP -->
+                <div class="portfolio-card" data-category="web mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="images/tap.png" alt="TAP">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://tap.pcsindonesia.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Sales Platform</span>
+                        <h3 class="portfolio-title">TAP</h3>
+                        <p class="portfolio-description">Merchant acquisition platform for sales teams.</p>
+                    </div>
+                </div>
+                
+                <!-- TAP Admin -->
+                <div class="portfolio-card" data-category="web dashboard" data-aos="fade-up" data-aos-delay="250">
+                    <div class="portfolio-image">
+                        <img src="images/tap.png" alt="TAP Admin">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://tap-wa.pcsindonesia.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Admin Dashboard</span>
+                        <h3 class="portfolio-title">TAP Admin</h3>
+                        <p class="portfolio-description">Sales team progress tracking and monitoring dashboard.</p>
+                    </div>
+                </div>
+                
+                <!-- Hisya -->
+                <div class="portfolio-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="images/hisya.png" alt="Hisya">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://app.hisya.id" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Healthcare</span>
+                        <h3 class="portfolio-title">Hisya Medical Record</h3>
+                        <p class="portfolio-description">Digital medical record application for healthcare providers.</p>
+                    </div>
+                </div>
+                
+                <!-- Lauretta -->
+                <div class="portfolio-card" data-category="web dashboard" data-aos="fade-up" data-aos-delay="350">
+                    <div class="portfolio-image">
+                        <img src="images/lauretta.png" alt="Lauretta">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://demo.lauretta.solutions" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Property Analytics</span>
+                        <h3 class="portfolio-title">Lauretta Property</h3>
+                        <p class="portfolio-description">Shopping mall analytics dashboard using camera data.</p>
+                    </div>
+                </div>
+                
+                <!-- Aladin Mall -->
+                <div class="portfolio-card" data-category="web dashboard" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="images/aladinmall.png" alt="Aladin Mall">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://www.moca.aladinmall.id" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">E-Commerce</span>
+                        <h3 class="portfolio-title">Aladin Mall</h3>
+                        <p class="portfolio-description">Back office and seller center for Misteraladin e-commerce.</p>
+                    </div>
+                </div>
+                
+                <!-- BPN -->
+                <div class="portfolio-card" data-category="web" data-aos="fade-up" data-aos-delay="450">
+                    <div class="portfolio-image">
+                        <img src="images/bpn.png" alt="BPN">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://siapukur.atrbpnkaltim.net" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Government</span>
+                        <h3 class="portfolio-title">BPN KALTIM</h3>
+                        <p class="portfolio-description">Land measurement management system for National Land Agency.</p>
+                    </div>
+                </div>
+                
+                <!-- Paperless Office -->
+                <div class="portfolio-card" data-category="web" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <img src="images/plo.png" alt="Paperless Office">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://plo-btn.eoviz.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Office Automation</span>
+                        <h3 class="portfolio-title">Paperless Office</h3>
+                        <p class="portfolio-description">Electronic office application to reduce paper usage.</p>
+                    </div>
+                </div>
+                
+                <!-- Sebulan Menjadi -->
+                <div class="portfolio-card" data-category="web" data-aos="fade-up" data-aos-delay="550">
+                    <div class="portfolio-image">
+                        <img src="images/sebulanmenjadi.png" alt="Sebulan Menjadi">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://www.linkedin.com/posts/adhiardiansyah_sebulan-menjadi-activity-6856083142823043072-S2_N" target="_blank" class="portfolio-link" title="View Details">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Education</span>
+                        <h3 class="portfolio-title">Sebulan Menjadi</h3>
+                        <p class="portfolio-description">Student mentoring program under Global Millennial Group.</p>
+                    </div>
+                </div>
+                
+                <!-- Be Global -->
+                <div class="portfolio-card" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <img src="images/beglobal.png" alt="Be Global">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://www.linkedin.com/posts/adhiardiansyah_be-global-indonesia-activity-6875328628922707968-VXTh" target="_blank" class="portfolio-link" title="View Details">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Youth Development</span>
+                        <h3 class="portfolio-title">Be Global Indonesia</h3>
+                        <p class="portfolio-description">Platform connecting Indonesian youth with international opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Have a project in mind? Let's discuss how I can help</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:adhiardiansyah23@gmail.com">adhiardiansyah23@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <span>Indonesia</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Availability</h4>
+                                <span>Open for opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/adhiardiansyah" target="_blank" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/adhiardiansyah" target="_blank" class="social-btn github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://instagram.com/adhiardiansyah" target="_blank" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linktr.ee/adhi_ardiansyah" target="_blank" class="social-btn linktree">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                                <i class="fas fa-envelope form-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry" required>
+                            <i class="fas fa-tag form-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            <i class="fas fa-comment form-icon textarea-icon"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">Adhi</span>
+                        <span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-tagline">Building digital experiences that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#portfolio" class="footer-link">Portfolio</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="year"></span> Adhi Ardiansyah. All rights reserved.
+                </p>
+                <p class="made-with">
+                    Made with <i class="fas fa-heart"></i> in Indonesia
+                </p>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js" onerror="console.warn('SMTP.js failed to load, using fallback')"></script>
     <script src="script.js"></script>
-    <script>
-      document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>
