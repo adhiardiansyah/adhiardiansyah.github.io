@@ -502,7 +502,7 @@
                         <img src="images/invera.png" alt="INVERA">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
-                                <a href="https://invera.pcsindonesia.com" target="_blank" class="portfolio-link" title="Visit Website">
+                                <a href="https://inventory-app.pose.co.id" target="_blank" class="portfolio-link" title="Visit Website">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
@@ -825,7 +825,17 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://smtpjs.com/v3/smtp.js" onerror="console.warn('SMTP.js failed to load, using fallback')"></script>
     <script src="script.js"></script>
+    <script>
+        // Load SMTP.js lazily after page is ready - it's non-critical
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var s = document.createElement('script');
+                s.src = 'https://smtpjs.com/v3/smtp.js';
+                s.onerror = function() { console.warn('SMTP.js failed to load, using mailto fallback'); };
+                document.body.appendChild(s);
+            }, 2000);
+        });
+    </script>
 </body>
 </html>

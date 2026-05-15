@@ -23,14 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function initPreloader() {
     const preloader = document.getElementById('preloader');
     
-    window.addEventListener('load', () => {
+    function hidePreloader() {
+        if (preloader.classList.contains('hidden')) return;
+        preloader.classList.add('hidden');
         setTimeout(() => {
-            preloader.classList.add('hidden');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
+            preloader.style.display = 'none';
         }, 500);
-    });
+    }
+
+    // Hide preloader when page fully loads
+    if (document.readyState === 'complete') {
+        // Page already loaded
+        setTimeout(hidePreloader, 300);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(hidePreloader, 300);
+        });
+    }
+
+    // Fallback: force hide after 3 seconds regardless of load state
+    setTimeout(hidePreloader, 3000);
 }
 
 /* ========================================
