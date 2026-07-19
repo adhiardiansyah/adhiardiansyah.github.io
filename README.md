@@ -43,7 +43,7 @@ The project uses the following external libraries loaded via CDN:
 │   ├── icon.png            # Website favicon
 │   ├── banner.jpg          # Hero section background
 │   ├── profile-1.png       # Profile image (About section)
-│   ├── profile-2.jpg       # Profile image (Hero section)
+│   ├── profile-2.png       # Profile image (Hero section)
 │   ├── effect.png          # Visual effect asset
 │   └── [project logos]     # Portfolio project thumbnails
 │       ├── pose.png
